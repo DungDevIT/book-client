@@ -9,7 +9,9 @@ const SingleBook = () => {
   useEffect(() => {
     const fetchBook = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/book/${id}`);
+        const response = await axios.get(
+          `https://book-api-three-peach.vercel.app/book/${id}`
+        );
         setBook(response.data);
       } catch (error) {
         console.error("Error fetching book data:", error);

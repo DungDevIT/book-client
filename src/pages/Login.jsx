@@ -18,7 +18,7 @@ const Login = () => {
       password: data.password,
     };
     await axios
-      .post("http://localhost:8000/user/login", userInfo)
+      .post("https://book-api-three-peach.vercel.app/user/login", userInfo)
       .then((res) => {
         if (res.data) {
           localStorage.setItem("Users", JSON.stringify(res.data.user));

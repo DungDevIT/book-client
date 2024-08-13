@@ -20,7 +20,7 @@ const SignUp = () => {
       password: data.password,
     };
     await axios
-      .post("http://localhost:8000/user/register", userInfo)
+      .post("https://book-api-three-peach.vercel.app/user/register", userInfo)
       .then((res) => {
         if (res.data) {
           toast.success("Sign Up successful");
